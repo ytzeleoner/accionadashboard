@@ -1,3 +1,6 @@
 module.exports = {
-    publicPath: './accionadashboard/dist'
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/accionadashboard/'
+    : '/',
+    outputDir: 'docs'
 };
